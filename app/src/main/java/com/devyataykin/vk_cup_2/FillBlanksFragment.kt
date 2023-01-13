@@ -63,6 +63,13 @@ class FillBlanksFragment : Fragment() {
         for (i in blanks.indices) {
             blanks[i]?.addTextChangedListener {
                 blanks[i]?.setTextColor(getColor(view, R.color.white))
+
+                if (blanks[i]?.text?.length == words[i].length) {
+                    if (i < blanks.size - 1) {
+                        blanks[i + 1]?.requestFocus()
+                    }
+                }
+
                 if (checkFilling()) {
                     button?.visibility = View.VISIBLE
 
@@ -88,10 +95,6 @@ class FillBlanksFragment : Fragment() {
 
     private fun Fragment.hideKeyboard() {
         view?.let { activity?.hideKeyboard(it) }
-    }
-
-    fun Activity.hideKeyboard() {
-        hideKeyboard(currentFocus ?: View(this))
     }
 
     private fun Context.hideKeyboard(view: View) {
