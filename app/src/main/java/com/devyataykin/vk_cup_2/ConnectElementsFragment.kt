@@ -76,7 +76,7 @@ class ConnectElementsFragment : Fragment() {
                 it.getGlobalVisibleRect(rect)
 
                 it.setBackgroundResource(R.drawable.rounded_selected_shape)
-                startPoint = PointF(rect.right.toFloat(), rect.top.toFloat())
+                startPoint = PointF(rect.right.toFloat(), rect.top.toFloat() - rect.height() / 2f)
                 selectedPoint = startPoint
                 selectedView = it
             }
@@ -87,7 +87,7 @@ class ConnectElementsFragment : Fragment() {
                 val rect = Rect()
                 it.getGlobalVisibleRect(rect)
 
-                stopPoint = PointF(rect.left.toFloat(), rect.top.toFloat())
+                stopPoint = PointF(rect.left.toFloat(), rect.top.toFloat() - rect.height() / 2f)
 
                 if (startPoint != null && stopPoint != null
                     && !points.contains(startPoint!!) && !points.contains(stopPoint!!)

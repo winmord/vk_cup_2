@@ -10,11 +10,11 @@ class MainActivity : AppCompatActivity(), ResponseClickListener {
     private val mainLooperHandler = Handler(Looper.getMainLooper())
     private var index = -1
     private val fragments = listOf(
-        DragAndDropFragment.newInstance(),
+        SelectOptionFragment.newInstance(),
         ConnectElementsFragment.newInstance(),
         FillBlanksFragment.newInstance(),
         StarsFragment.newInstance(),
-        SelectOptionFragment.newInstance()
+        DragAndDropFragment.newInstance()
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {

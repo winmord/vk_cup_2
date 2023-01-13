@@ -57,15 +57,17 @@ class SelectOptionFragment : Fragment() {
         for (i in options.indices) {
             options[i]?.setOnClickListener {
                 checks[i]?.visibility = View.VISIBLE
-                var answerPercent = Random.nextInt(0, 100)
+                var rest = 100
+                var answerPercent = Random.nextInt(0, rest)
+
 
                 percents[i]?.text = "$answerPercent%"
                 percents[i]?.visibility = View.VISIBLE
 
                 for (j in percents.indices) {
                     if (j == i) continue
-                    answerPercent = 100 - answerPercent
-                    answerPercent = Random.nextInt(0, answerPercent)
+                    rest -= answerPercent
+                    answerPercent = Random.nextInt(0, rest)
                     percents[j]?.text = "$answerPercent%"
                     percents[j]?.visibility = View.VISIBLE
                 }

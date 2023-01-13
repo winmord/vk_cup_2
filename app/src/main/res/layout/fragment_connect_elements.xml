@@ -42,7 +42,8 @@
                     android:paddingStart="32dp"
                     android:paddingEnd="32dp"
                     android:text="@string/option_1"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
 
                 <TextView
                     android:id="@+id/left_element_2"
@@ -54,7 +55,8 @@
                     android:paddingStart="32dp"
                     android:paddingEnd="32dp"
                     android:text="@string/option_2"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
 
                 <TextView
                     android:id="@+id/left_element_3"
@@ -65,7 +67,8 @@
                     android:paddingStart="32dp"
                     android:paddingEnd="32dp"
                     android:text="@string/option_3"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -84,7 +87,8 @@
                     android:paddingStart="32dp"
                     android:paddingEnd="32dp"
                     android:text="@string/option_a"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
 
                 <TextView
                     android:id="@+id/right_element_2"
@@ -96,7 +100,8 @@
                     android:paddingStart="32dp"
                     android:paddingEnd="32dp"
                     android:text="@string/option_b"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
 
                 <TextView
                     android:id="@+id/right_element_3"
@@ -107,7 +112,8 @@
                     android:paddingStart="32dp"
                     android:paddingEnd="32dp"
                     android:text="@string/option_c"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
             </LinearLayout>
         </LinearLayout>
 

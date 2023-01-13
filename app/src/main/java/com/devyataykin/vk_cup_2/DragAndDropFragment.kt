@@ -1,5 +1,6 @@
 package com.devyataykin.vk_cup_2
 
+import android.annotation.SuppressLint
 import android.content.ClipData
 import android.content.ClipDescription
 import android.content.Context
@@ -11,11 +12,8 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.util.TypedValue
-import android.view.DragEvent
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.TextView
 import androidx.core.widget.addTextChangedListener
@@ -49,7 +47,10 @@ class DragAndDropFragment : Fragment() {
                 true
             }
             DragEvent.ACTION_DROP -> {
-
+                edits.forEach {
+                    it?.isCursorVisible = false
+                    it?.isEnabled = false
+                }
                 true
             }
             DragEvent.ACTION_DRAG_ENDED -> {
@@ -94,6 +95,7 @@ class DragAndDropFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_drag_and_drop, container, false)
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -109,12 +111,29 @@ class DragAndDropFragment : Fragment() {
             drags[i]?.text = words[i]
             attachViewDragListener(drags[i]!!)
             drags[i]?.setOnDragListener(maskDragListener)
+
+            drags[i]?.setOnTouchListener { v, event ->
+                when (event?.action) {
+                    MotionEvent.ACTION_DOWN -> edits.forEach {
+                        it?.isCursorVisible = true
+                        it?.isEnabled = true
+                    }
+                }
+
+                v?.onTouchEvent(event) ?: true
+            }
+
         }
 
         for (edit in edits) {
+            edit?.isEnabled = false
+            edit?.isCursorVisible = false
             edit?.addTextChangedListener {
                 if (edit.text?.isNotBlank() == true) {
-                    edit.isEnabled = false
+                    edits.forEach {
+                        it?.isCursorVisible = false
+                        it?.isEnabled = false
+                    }
 
                     if (currentDrag != null) {
                         currentDrag?.visibility = View.GONE
