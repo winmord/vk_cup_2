@@ -10,7 +10,8 @@ class MainActivity : AppCompatActivity(), ResponseClickListener {
     private val mainLooperHandler = Handler(Looper.getMainLooper())
     private var index = -1
     private val fragments = listOf(
-        StarsFragment.newInstance()
+        StarsFragment.newInstance(),
+        SelectOptionFragment.newInstance()
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {

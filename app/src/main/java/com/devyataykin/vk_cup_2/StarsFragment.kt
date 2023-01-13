@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AccelerateDecelerateInterpolator
 import android.widget.ImageButton
 import com.devyataykin.vk_cup_2.common.ResponseClickListener
 import com.google.android.material.button.MaterialButton
@@ -45,12 +46,19 @@ class StarsFragment : Fragment() {
 
     private fun updateStars(rating: Int) {
         for (i in 1..5) {
+            stars[i - 1]?.animate()!!.cancel()
             stars[i - 1]?.setBackgroundResource(
                 if (rating > i - 1)
                     R.drawable.ic_baseline_active_star_rate_24
                 else
                     R.drawable.ic_baseline_inactive_star_rate_24
             )
+
+            if (rating > i - 1) {
+                stars[i - 1]?.animate()!!
+                    .scaleX(-1f)
+                    .setInterpolator(AccelerateDecelerateInterpolator()).duration = 500
+            }
         }
 
         rateButton?.visibility = if (rating > 0) View.VISIBLE else View.INVISIBLE
