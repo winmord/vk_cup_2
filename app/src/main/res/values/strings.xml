@@ -1,7 +1,8 @@
 <resources>
     <string name="app_name">vk_cup_2</string>
     <string name="stars_response_text">Оцените просмотренный материал</string>
-    <string name="answer_button_text">Оценить</string>
+    <string name="rate_button_text">Оценить</string>
+    <string name="answer_button_text">Проверить</string>
     <string name="rating_star">rating star</string>
     <string name="thanks_for_answer">Спасибо за ответ!</string>
     <string name="option_1">1</string>
@@ -11,4 +12,7 @@
     <string name="check">check</string>
     <string name="first_question_title">Первый вопрос</string>
     <string name="first_question">Вопрос 1/1</string>
+    <string name="fill_blanks_text_element_1">This</string>
+    <string name="fill_blanks_text_element_2">fill blanks</string>
+    <string name="fill_blanks_text_element_3">.</string>
 </resources>

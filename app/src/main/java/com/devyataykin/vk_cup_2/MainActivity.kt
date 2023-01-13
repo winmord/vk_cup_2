@@ -10,6 +10,7 @@ class MainActivity : AppCompatActivity(), ResponseClickListener {
     private val mainLooperHandler = Handler(Looper.getMainLooper())
     private var index = -1
     private val fragments = listOf(
+        FillBlanksFragment.newInstance(),
         StarsFragment.newInstance(),
         SelectOptionFragment.newInstance()
     )
