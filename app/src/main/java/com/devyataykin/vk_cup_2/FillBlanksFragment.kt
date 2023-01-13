@@ -32,7 +32,6 @@ class FillBlanksFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_fill_blanks, container, false)
     }
 
-    @RequiresApi(Build.VERSION_CODES.O)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
