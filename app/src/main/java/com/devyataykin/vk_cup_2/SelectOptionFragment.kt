@@ -60,7 +60,6 @@ class SelectOptionFragment : Fragment() {
                 var rest = 100
                 var answerPercent = Random.nextInt(0, rest)
 
-
                 percents[i]?.text = "$answerPercent%"
                 percents[i]?.visibility = View.VISIBLE
 
