@@ -81,9 +81,8 @@
         android:layout_marginBottom="16dp"
         android:backgroundTint="@android:color/holo_orange_dark"
         android:text="@string/rate_button_text"
-        android:textAllCaps="false"
         android:textColor="@color/white"
-        android:textSize="18sp"
+        android:textSize="14sp"
         android:visibility="invisible"
         app:cornerRadius="40dp"
         app:layout_constraintBottom_toBottomOf="parent" />

@@ -24,4 +24,5 @@
     <string name="drag_and_drop_text_element_1">This</string>
     <string name="drag_and_drop_text_element_2">drag and</string>
     <string name="drag_and_drop_text_element_3">interaction.</string>
+    <string name="connect_elements_text">Соедините элементы</string>
 </resources>

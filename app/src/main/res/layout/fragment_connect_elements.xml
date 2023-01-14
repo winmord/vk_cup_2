@@ -18,6 +18,13 @@
         android:gravity="center"
         android:orientation="vertical">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="@string/connect_elements_text"
+            android:textSize="18sp" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -34,41 +41,32 @@
 
                 <TextView
                     android:id="@+id/left_element_1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/ConnectElementsTextView"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
                     android:layout_gravity="center"
                     android:layout_marginBottom="8dp"
                     android:background="@drawable/rounded_shape"
-                    android:paddingStart="32dp"
-                    android:paddingEnd="32dp"
-                    android:text="@string/option_1"
-                    android:textColor="@color/white"
-                    android:textSize="18sp" />
+                    android:text="@string/option_1" />
 
                 <TextView
                     android:id="@+id/left_element_2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/ConnectElementsTextView"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
                     android:layout_gravity="center"
                     android:layout_marginBottom="8dp"
                     android:background="@drawable/rounded_shape"
-                    android:paddingStart="32dp"
-                    android:paddingEnd="32dp"
-                    android:text="@string/option_2"
-                    android:textColor="@color/white"
-                    android:textSize="18sp" />
+                    android:text="@string/option_2" />
 
                 <TextView
                     android:id="@+id/left_element_3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/ConnectElementsTextView"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
                     android:layout_gravity="center"
                     android:background="@drawable/rounded_shape"
-                    android:paddingStart="32dp"
-                    android:paddingEnd="32dp"
-                    android:text="@string/option_3"
-                    android:textColor="@color/white"
-                    android:textSize="18sp" />
+                    android:text="@string/option_3" />
             </LinearLayout>
 
             <LinearLayout
@@ -79,55 +77,49 @@
 
                 <TextView
                     android:id="@+id/right_element_1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/ConnectElementsTextView"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
                     android:layout_gravity="center"
                     android:layout_marginBottom="8dp"
                     android:background="@drawable/rounded_shape"
-                    android:paddingStart="32dp"
-                    android:paddingEnd="32dp"
-                    android:text="@string/option_a"
-                    android:textColor="@color/white"
-                    android:textSize="18sp" />
+                    android:text="@string/option_a" />
 
                 <TextView
                     android:id="@+id/right_element_2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/ConnectElementsTextView"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
                     android:layout_gravity="center"
                     android:layout_marginBottom="8dp"
                     android:background="@drawable/rounded_shape"
-                    android:paddingStart="32dp"
-                    android:paddingEnd="32dp"
-                    android:text="@string/option_b"
-                    android:textColor="@color/white"
-                    android:textSize="18sp" />
+                    android:text="@string/option_b" />
 
                 <TextView
                     android:id="@+id/right_element_3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/ConnectElementsTextView"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
                     android:layout_gravity="center"
                     android:background="@drawable/rounded_shape"
-                    android:paddingStart="32dp"
-                    android:paddingEnd="32dp"
-                    android:text="@string/option_c"
-                    android:textColor="@color/white"
-                    android:textSize="18sp" />
+                    android:text="@string/option_c" />
             </LinearLayout>
         </LinearLayout>
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/answer_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="16dp"
-            android:backgroundTint="@android:color/holo_orange_dark"
-            android:text="@string/answer_button_text"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:visibility="invisible"
-            app:cornerRadius="40dp" />
     </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/answer_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@android:color/holo_orange_dark"
+        android:text="@string/answer_button_text"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:visibility="invisible"
+        app:cornerRadius="40dp"
+        app:layout_constraintBottom_toBottomOf="parent" />
 </RelativeLayout>
