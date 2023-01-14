@@ -26,7 +26,7 @@ class DragAndDropFragment : Fragment() {
     private val edits = arrayOfNulls<EditText>(2)
     private var answerButton: MaterialButton? = null
     private var currentDrag: View? = null
-    private val words = listOf("is", "drop")
+    private val words = listOf("two", "four")
 
     private val maskDragListener = View.OnDragListener { view, dragEvent ->
         val draggableItem = dragEvent.localState as View
@@ -117,6 +117,10 @@ class DragAndDropFragment : Fragment() {
                     MotionEvent.ACTION_DOWN -> edits.forEach {
                         it?.isCursorVisible = true
                         it?.isEnabled = true
+                    }
+                    MotionEvent.ACTION_UP -> edits.forEach {
+                        it?.isCursorVisible = false
+                        it?.isEnabled = false
                     }
                 }
 

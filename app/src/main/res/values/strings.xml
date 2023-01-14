@@ -21,9 +21,10 @@
     <string name="option_a">A</string>
     <string name="option_b">B</string>
     <string name="option_c">C</string>
-    <string name="drag_and_drop_text_element_1">This</string>
-    <string name="drag_and_drop_text_element_2">drag and</string>
-    <string name="drag_and_drop_text_element_3">interaction.</string>
+    <string name="drag_and_drop_text_element_1">One</string>
+    <string name="drag_and_drop_text_element_2">three</string>
+    <string name="drag_and_drop_text_element_3">five.</string>
     <string name="connect_elements_text">Соедините элементы</string>
     <string name="fill_blanks_text">Заполните пропуски:</string>
+    <string name="drag_and_drop_text">Заполните пропуски, перетащив соответствующие элементы:</string>
 </resources>
