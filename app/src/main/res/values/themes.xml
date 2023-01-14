@@ -14,5 +14,6 @@
         <!-- Customize your theme here. -->
         <item name="android:editTextColor">@color/white</item>
         <item name="fontFamily">"YS Text"</item>
+        <item name="android:navigationBarColor">@color/black</item>
     </style>
 </resources>
