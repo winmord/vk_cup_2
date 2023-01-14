@@ -12,9 +12,9 @@
     <string name="check">check</string>
     <string name="first_question_title">Первый вопрос</string>
     <string name="first_question">Вопрос 1/1</string>
-    <string name="fill_blanks_text_element_1">This</string>
-    <string name="fill_blanks_text_element_2">fill blanks</string>
-    <string name="fill_blanks_text_element_3">.</string>
+    <string name="fill_blanks_text_element_1">One</string>
+    <string name="fill_blanks_text_element_2">three</string>
+    <string name="fill_blanks_text_element_3">five.</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="image_view_for_connection_lines">image view for connection lines</string>
@@ -25,4 +25,5 @@
     <string name="drag_and_drop_text_element_2">drag and</string>
     <string name="drag_and_drop_text_element_3">interaction.</string>
     <string name="connect_elements_text">Соедините элементы</string>
+    <string name="fill_blanks_text">Заполните пропуски:</string>
 </resources>

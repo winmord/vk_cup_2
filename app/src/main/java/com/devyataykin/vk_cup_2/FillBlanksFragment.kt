@@ -23,7 +23,7 @@ class FillBlanksFragment : Fragment() {
     private val blanks = arrayOfNulls<EditText>(2)
     private var button: MaterialButton? = null
 
-    private val words = listOf("is", "interaction")
+    private val words = listOf("two", "four")
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
